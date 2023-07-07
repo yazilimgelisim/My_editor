@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism.css">
+        <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Content list page</title>
+</head>
+
+<body>
+    <header>
+        <h2>
+            <a href="/editor">Editor Page</a>
+        </h2>
+        <nav>
+            <a href="/editor">
+                <span><i class='bx bxs-edit'></i>Edit Page</span>
+            </a>
+            <a href="/pages">
+                <span><i class='bx bx-outline'></i>Output</span>
+            </a>
+        </nav>
+    </header>
+
+{{#each data}}
+    <section class="notImageSection">
+        <div class="content">
+            <h3 class="outTitle">{{title}}</h3>
+            <pre class="inText">
+                {{text}}
+            </pre>
+            <article class="outText">
+
+            </article>
+        </div>
+    </section>
+{{/each}}
+
+<script type="module">
+    const inText = document.querySelectorAll('.inText')
+    const outText = document.querySelectorAll('.outText')
+    const prism = document.querySelectorAll('.prism')
+
+    import {addDelete} from '/js/helper.js'
+
+
+    for(let i = 0; i < inText.length; i++){
+        outText[i].innerHTML = inText[i].innerText
+        inText[i].style.display = 'none'
+        addDelete(prism)
+    }
+    
+</script>
+</body>
+</html>

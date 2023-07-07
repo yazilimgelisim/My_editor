@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
+    <title>İndex page</title>
+</head>
+
+<body>
+    <header>
+        <h2>
+            <a href="/editor">Editor Page</a>
+        </h2>
+        <nav>
+            <a href="/editor">
+                <span><i class='bx bxs-edit'></i>Edit Page</span>
+            </a>
+            <a href="/pages">
+                <span><i class='bx bx-outline'></i>Output</span>
+            </a>
+        </nav>
+    </header>
+    <h2 class="baslik">Main Editor Page</h2>
+
+    <form action="/add" method="post">
+        <div class="title">
+            <input id="title" name="title" type="text">
+        </div>
+
+        <div class="textArea">
+            <div class="textHeader">
+                <i class='bx bx-palette'>
+                    <div id="colors">
+                        <div class="color #ffcaca"></div>
+                        <div class="color #ff9d9d"></div>
+                        <div class="color #ff7979"></div>
+                        <div class="color #ff4e4e"></div>
+
+                        <div class="color #ffcc00"></div>
+                        <div class="color #ffe731"></div>
+                        <div class="color #fdff9e"></div>
+                        <div class="color #feffc"></div>
+
+                        <div class="color #bae1ff"></div>
+                        <div class="color #88cbff"></div>
+                        <div class="color #5fbaff"></div>
+                        <div class="color #0091ff"></div>
+
+                        <div class="color #2fff06"></div>
+                        <div class="color #a9ff54"></div>
+                        <div class="color #9fff8c"></div>
+                        <div class="color #cfffc5"></div>
+                    </div>
+                </i>
+                <i class='bx bx-bold'></i>
+                <i class='bx bx-italic'></i>
+                <i class='bx bx-underline'></i>
+                <i class='bx bx-link'></i>
+                <i class='bx bx-code'></i>
+                <select name="language" id="language">
+                    <option value="language-html">HTML</option>
+                    <option value="language-markup">Markup</option>
+                    <option value="language-xml">XML</option>
+                    <option value="language-svg">SVG</option>
+                    <option value="language-mathml">MathML</option>
+                    <option value="language-ssmal">SSMAL</option>
+                    <option value="language-atom">Atom</option>
+                    <option value="language-rss">RSS</option>
+                    <option value="language-css">CSS</option>
+                    <option value="language-clike">C-like</option>
+                    <option value="language-javascript">JavaScript</option>
+                </select>
+            </div>
+            <textarea name="text" id="text">
+        </textarea>
+        </div>
+
+        <div class="buttons">
+            <div id="linkArea">
+                <input id="linkURL" type="text" placeholder="URL connection">
+                <div id="linkButton">Connect</div>
+
+            </div>
+            <button type="submit">Text Add</button>
+        </div>
+    </form>
+
+    <section class="notImageSection">
+        <div class="content">
+            <h3 id="outTitle"></h3>
+            <article id="outText">
+            </article>
+        </div>
+    </section>
+
+
+    <script type="module" src="/js/editor.js"></script>
+
+</body>
+
+</html>
