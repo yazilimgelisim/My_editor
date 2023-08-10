@@ -26,6 +26,19 @@ CkEditor gibi editörlerin alternatifi olarak tasarlanmıştır.
   paketimizdir.
 
 ## Kullanımı hakkında:
-- Template Engine olarak `express-handlebars` kullanıldığından yine `express-handlebars` paketini aktif olarak kullandığınız
-  projeler için kullanmanız gerekmektedir.
-- 
+- Template Engine olarak `express-handlebars` kullanıldığından yine `express-handlebars` paketi ile çalıştığınız projelerde kullanmanız tavsiye edilmektedir.
+- Projeyi doğrudan test edebilemek için bilgisayarınızda kurulu olan [Node.js](https://nodejs.org/tr)'in versiyonun 16.0.0 ve üzeri olması gerekmektedir. `express-handlebars`'ın kullanılan sürümü `node.js`'in 14. ve daha altı sürümlerinde çalışmamaktadır. Ayrıca `jsdom` paketi de eski `node.js` versiyonlarında hata vermektedir.
+-  Projeyi `localhost`'ta doğrudan kullanmanız için ilk olarak herhangi bir klasör içerisine girip terminal percerine şu kodu yapıştırıyoruz:
+  ```
+  git clone https://github.com/yazilimgelisim/My_editor.git
+  ```
+- Daha sonra gerekli paketlerin indirilmesi için `npm install` komutu ile gerekli paketleri indiriyoruz.
+```
+npm install
+```
+  
+  
+
+
+
+
